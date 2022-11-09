@@ -1,0 +1,18 @@
+USE music_store_recommendations;
+
+INSERT INTO label_recommendation(label_recommendation_id, label_id, user_id, liked)
+VALUES (1, 1, 1, true),
+       (2, 2, 2, true);
+
+INSERT INTO artist_recommendation(artist_recommendation_id, artist_id, user_id, liked)
+VALUES (1, 1, 1, true),
+       (2, 2, 2, true);
+
+INSERT INTO album_recommendation(album_recommendation_id, album_id, user_id, liked)
+VALUES (1, 1, 1, true),
+       (2, 2, 2, true);
+
+
+INSERT INTO track_recommendation(track_recommendation_id, track_id, user_id, liked)
+VALUES (1, 1, 1, true),
+       (2, 2, 2, true);
