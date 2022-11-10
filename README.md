@@ -4,3 +4,12 @@ is a microservice with a REST API that provides CRUD functionality for a databas
 # KEY FEATURES
 
 1.- Microservice is containerized and deployed on Heroku 2.- Microservice and database are deployed to Heroku 3.- Microservice uses Mockito to test REST API
+
+
+#Live Deployment 
+
+(Check it out with Swagger)
+https://vast-hamlet-28440.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/album-recommendation-controller/create
+
+(Raw Deplyment)
+https://vast-hamlet-28440.herokuapp.com/album/recommendation/all
