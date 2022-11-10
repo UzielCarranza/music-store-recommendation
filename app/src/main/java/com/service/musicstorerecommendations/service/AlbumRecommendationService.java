@@ -15,11 +15,9 @@ public class AlbumRecommendationService {
     }
 
     public AlbumRecommendation createAlbum(AlbumRecommendation album) {
-
-        AlbumRecommendation albumRecommendation = new AlbumRecommendation();
 //        code gather from SMU Challenge 5
         if (album == null) throw new IllegalArgumentException("No Album is passed! Album object is null!");
-        return albumRecommendationRepository.save(albumRecommendation);
+        return albumRecommendationRepository.save(album);
     }
 
     public AlbumRecommendation getAlbumById(long id) {
