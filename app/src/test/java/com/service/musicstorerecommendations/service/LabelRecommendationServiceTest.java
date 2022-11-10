@@ -1,6 +1,7 @@
 package com.service.musicstorerecommendations.service;
 
 import com.service.musicstorerecommendations.model.LabelRecommendation;
+import com.service.musicstorerecommendations.model.TrackRecommendation;
 import com.service.musicstorerecommendations.repository.LabelRecommendationRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -64,6 +65,19 @@ public class LabelRecommendationServiceTest {
 //        ACT
         // get it back out of the database
         LabelRecommendation labelPersistentOnDatabase = service.getLabelRecommendationById(labelSetUp.getId());
+
+//        ASSERT
+        // confirm that the thing I got back from the database is the thing I wrote the database
+        assertEquals(labelSetUp, labelPersistentOnDatabase);
+
+    }
+
+    @Test
+    public void shouldReturnNewLabelOnPostRequest() throws Exception {
+
+//        ACT
+        // get it back out of the database
+        LabelRecommendation labelPersistentOnDatabase = service.createLabel(labelSetUp);
 
 //        ASSERT
         // confirm that the thing I got back from the database is the thing I wrote the database

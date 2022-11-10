@@ -1,5 +1,6 @@
 package com.service.musicstorerecommendations.service;
 
+import com.service.musicstorerecommendations.model.AlbumRecommendation;
 import com.service.musicstorerecommendations.model.ArtistRecommendation;
 import com.service.musicstorerecommendations.repository.ArtistRecommendationRepository;
 import org.junit.Before;
@@ -64,6 +65,19 @@ public class ArtistRecommendationServiceTest {
 //        ACT
         // get it back out of the database
         ArtistRecommendation artistPersistentOnDatabase = service.getArtistRecommendationById(artistSetUp.getId());
+
+//        ASSERT
+        // confirm that the thing I got back from the database is the thing I wrote the database
+        assertEquals(artistSetUp, artistPersistentOnDatabase);
+
+    }
+
+    @Test
+    public void shouldReturnNewArtistOnPostRequest() throws Exception {
+
+//        ACT
+        // get it back out of the database
+        ArtistRecommendation artistPersistentOnDatabase = service.createArtistRecommendation(artistSetUp);
 
 //        ASSERT
         // confirm that the thing I got back from the database is the thing I wrote the database

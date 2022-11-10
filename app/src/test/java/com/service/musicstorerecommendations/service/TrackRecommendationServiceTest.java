@@ -1,5 +1,6 @@
 package com.service.musicstorerecommendations.service;
 
+import com.service.musicstorerecommendations.model.ArtistRecommendation;
 import com.service.musicstorerecommendations.model.TrackRecommendation;
 import com.service.musicstorerecommendations.repository.TrackRecommendationRepository;
 import org.junit.Before;
@@ -7,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.sound.midi.Track;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -62,6 +64,19 @@ public class TrackRecommendationServiceTest {
 //        ACT
         // get it back out of the database
         TrackRecommendation trackPersistentOnDatabase = service.getTrackRecommendationById(trackSetUp.getId());
+
+//        ASSERT
+        // confirm that the thing I got back from the database is the thing I wrote the database
+        assertEquals(trackSetUp, trackPersistentOnDatabase);
+
+    }
+
+    @Test
+    public void shouldReturnNewTrackOnPostRequest() throws Exception {
+
+//        ACT
+        // get it back out of the database
+        TrackRecommendation trackPersistentOnDatabase = service.createTrackRecommendation(trackSetUp);
 
 //        ASSERT
         // confirm that the thing I got back from the database is the thing I wrote the database
