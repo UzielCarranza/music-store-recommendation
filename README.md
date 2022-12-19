@@ -9,7 +9,7 @@ is a microservice with a REST API that provides CRUD functionality for a databas
 #Live Deployment 
 
 (Check it out with Swagger)
-https://vast-hamlet-28440.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/album-recommendation-controller/create
+https://gentle-sierra-44907.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/album-recommendation-controller/create
 
 (Raw Deplyment)
-https://vast-hamlet-28440.herokuapp.com/album/recommendation/all
+https://gentle-sierra-44907.herokuapp.com/album/recommendation/all
