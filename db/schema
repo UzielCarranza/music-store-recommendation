@@ -1,5 +1,4 @@
-create database music_store_recommendations;
-use music_store_recommendations;
+use pgqn07gizikq99x6;
 
 create table label_recommendation (
                                       label_recommendation_id int primary key auto_increment,

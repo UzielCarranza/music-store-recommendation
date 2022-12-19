@@ -1,4 +1,4 @@
-USE music_store_recommendations;
+USE pgqn07gizikq99x6;
 
 INSERT INTO label_recommendation(label_recommendation_id, label_id, user_id, liked)
 VALUES (1, 1, 1, true),
